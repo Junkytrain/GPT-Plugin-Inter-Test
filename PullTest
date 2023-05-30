@@ -1,0 +1,37 @@
+import json
+
+# Sample guest inquiries and responses
+guest_conversations = [
+    {
+        "guest_id": "guest123",
+        "inquiries": [
+            "Is the property available from June 1st to June 7th?",
+            "What is the price per night?",
+            "Are pets allowed?"
+        ],
+        "responses": [
+            "Yes, the property is available from June 1st to June 7th.",
+            "The price per night is $150.",
+            "I'm sorry, pets are not allowed."
+        ]
+    },
+    {
+        "guest_id": "guest456",
+        "inquiries": [
+            "Is there parking available?",
+            "Can I check in early?",
+            "Are there any nearby restaurants?"
+        ],
+        "responses": [
+            "Yes, there is parking available.",
+            "Early check-in is subject to availability.",
+            "Yes, there are several restaurants within walking distance."
+        ]
+    }
+]
+
+# Saving guest conversations to a JSON file
+with open("guest_conversations.json", "w") as f:
+    json.dump(guest_conversations, f, indent=4)
+
+print("Sample guest conversations saved to guest_conversations.json.")
